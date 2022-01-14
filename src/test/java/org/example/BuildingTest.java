@@ -54,4 +54,11 @@ public class BuildingTest
         building.addResident("Alex");
         assertEquals(2, building.getResidents().length);
     }
+
+    @Test
+    public void removeResident() {
+        Building building = new Building(1, new String[]{"Alex", "Peter"});
+        building.removeResident("Alex");
+        assertEquals(1, building.getResidents().length);
+    }
 }

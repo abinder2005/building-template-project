@@ -50,4 +50,8 @@ public class Building
             mResidents.add(name);
         }
     }
+
+    public void removeResident(String name) {
+        mResidents.remove(name);
+    }
 }
