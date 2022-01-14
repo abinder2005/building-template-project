@@ -26,4 +26,11 @@ public class BuildingTest
         Building building = new Building(1, "Alex");
         assertEquals("Alex", building.getResident());
     }
+
+    @Test
+    public void getBothResidentsOfBuilding() {
+        String[] residents = new String[]{"Alex", "Peter"};
+        Building building = new Building(1, residents);
+        assertEquals(residents, building.getResidents());
+    }
 }
