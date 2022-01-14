@@ -1,5 +1,6 @@
 package org.example;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -9,12 +10,9 @@ import org.junit.Test;
  */
 public class BuildingTest
 {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void createSimpleBuilding() {
+        Building building = new Building(1, "Alex");
+        assertNotNull(building);
     }
 }

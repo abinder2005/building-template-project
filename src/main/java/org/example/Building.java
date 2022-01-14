@@ -6,8 +6,11 @@ package org.example;
  */
 public class Building
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    private int mId;
+    private String mResident;
+
+    public Building(int id, String resident) {
+        mId = id;
+        mResident = resident;
     }
 }
