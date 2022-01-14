@@ -25,14 +25,14 @@ public class BuildingTest
     public void getResidentOfBuilding() {
         Building building = new Building(1, "Alex");
         String[] exp = new String[]{"Alex"};
-        assertEquals(exp, building.getResidents());
+        assertArrayEquals(exp, building.getResidents());
     }
 
     @Test
     public void getBothResidentsOfBuilding() {
         String[] residents = new String[]{"Alex", "Peter"};
         Building building = new Building(1, residents);
-        assertEquals(residents, building.getResidents());
+        assertArrayEquals(residents, building.getResidents());
     }
 
     @Test
