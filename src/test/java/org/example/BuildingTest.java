@@ -63,9 +63,15 @@ public class BuildingTest
     }
 
     @Test
-    public void removeNotExistenResident() {
+    public void removeNotExistingResident() {
         Building building = new Building(1, new String[]{"Alex", "Peter"});
         building.removeResident("Franz");
         assertEquals(2, building.getResidents().length);
+    }
+
+    @Test
+    public void getNumberOfResidents() {
+        Building building = new Building(1, new String[]{"Alex", "Peter", "Franz"});
+        assertEquals(3, building.numberOfResidents());
     }
 }

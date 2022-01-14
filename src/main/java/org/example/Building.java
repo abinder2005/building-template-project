@@ -54,4 +54,8 @@ public class Building
     public void removeResident(String name) {
         mResidents.remove(name);
     }
+
+    public int numberOfResidents() {
+        return mResidents.size();
+    }
 }
