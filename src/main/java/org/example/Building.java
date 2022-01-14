@@ -44,4 +44,10 @@ public class Building
         }
         return output;
     }
+
+    public void addResident(String name) {
+        if (!mResidents.contains(name)) {
+            mResidents.add(name);
+        }
+    }
 }

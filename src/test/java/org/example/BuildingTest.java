@@ -40,4 +40,11 @@ public class BuildingTest
         Building building = new Building(1, residents);
         assertNotEquals(residents, building.getResidents());
     }
+
+    @Test
+    public void checkAddResident() {
+        Building building = new Building(1, new String[]{"Alex", "Peter"});
+        building.addResident("Franz");
+        assertEquals(3, building.getResidents().length);
+    }
 }
