@@ -33,10 +33,6 @@ public class Building
         return mId;
     }
 
-    public String getResident() {
-        return mResidents.get(0);
-    }
-
     public String[] getResidents() {
         String[] output = new String[mResidents.size()];
         for (int i = 0; i < mResidents.size(); i++) {
