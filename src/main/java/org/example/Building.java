@@ -13,4 +13,8 @@ public class Building
         mId = id;
         mResident = resident;
     }
+
+    public int getId() {
+        return mId;
+    }
 }

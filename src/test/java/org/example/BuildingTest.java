@@ -1,9 +1,8 @@
 package org.example;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
  * Unit test for simple App.
@@ -14,5 +13,11 @@ public class BuildingTest
     public void createSimpleBuilding() {
         Building building = new Building(1, "Alex");
         assertNotNull(building);
+    }
+
+    @Test
+    public void getIdOfBuilding() {
+        Building building = new Building(1, "Alex");
+        assertEquals(1, building.getId());
     }
 }
