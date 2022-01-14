@@ -33,4 +33,11 @@ public class BuildingTest
         Building building = new Building(1, residents);
         assertEquals(residents, building.getResidents());
     }
+
+    @Test
+    public void checkIfResidentAlreadyExists() {
+        String[] residents = new String[]{"Alex", "Peter", "Alex"};
+        Building building = new Building(1, residents);
+        assertNotEquals(residents, building.getResidents());
+    }
 }

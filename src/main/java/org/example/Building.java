@@ -1,5 +1,9 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Hello world!
  *
@@ -8,7 +12,7 @@ public class Building
 {
     private int mId;
     private String mResident;
-    private String[] mResidents;
+    private List<String> mResidents;
 
     public Building(int id, String resident) {
         mId = id;
@@ -17,7 +21,12 @@ public class Building
 
     public Building(int id, String[] residents) {
         mId = id;
-        mResidents = residents;
+        mResidents = new ArrayList<>();
+        for (String resident : residents) {
+            if (!mResidents.contains(resident)) {
+                mResidents.add(resident);
+            }
+        }
     }
 
     public int getId() {
@@ -29,6 +38,10 @@ public class Building
     }
 
     public String[] getResidents() {
-        return mResidents;
+        String[] output = new String[mResidents.size()];
+        for (int i = 0; i < mResidents.size(); i++) {
+            output[i] = mResidents.get(i);
+        }
+        return output;
     }
 }
