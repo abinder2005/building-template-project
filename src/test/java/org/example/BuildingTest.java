@@ -47,4 +47,11 @@ public class BuildingTest
         building.addResident("Franz");
         assertEquals(3, building.getResidents().length);
     }
+
+    @Test
+    public void addAlreadyExistingResident() {
+        Building building = new Building(1, new String[]{"Alex", "Peter"});
+        building.addResident("Alex");
+        assertEquals(2, building.getResidents().length);
+    }
 }
