@@ -17,4 +17,8 @@ public class Building
     public int getId() {
         return mId;
     }
+
+    public String getResident() {
+        return mResident;
+    }
 }

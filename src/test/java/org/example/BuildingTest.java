@@ -20,4 +20,10 @@ public class BuildingTest
         Building building = new Building(1, "Alex");
         assertEquals(1, building.getId());
     }
+
+    @Test
+    public void getResidentOfBuilding() {
+        Building building = new Building(1, "Alex");
+        assertEquals("Alex", building.getResident());
+    }
 }
