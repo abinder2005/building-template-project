@@ -23,9 +23,7 @@ public class Building
         mId = id;
         mResidents = new ArrayList<>();
         for (String resident : residents) {
-            if (!mResidents.contains(resident)) {
-                mResidents.add(resident);
-            }
+            this.addResident(resident);
         }
     }
 
@@ -34,11 +32,7 @@ public class Building
     }
 
     public String[] getResidents() {
-        String[] output = new String[mResidents.size()];
-        for (int i = 0; i < mResidents.size(); i++) {
-            output[i] = mResidents.get(i);
-        }
-        return output;
+        return mResidents.toArray(new String[0]);
     }
 
     public void addResident(String name) {
