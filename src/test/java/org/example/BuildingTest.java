@@ -74,4 +74,10 @@ public class BuildingTest
         Building building = new Building(1, new String[]{"Alex", "Peter", "Franz"});
         assertEquals(3, building.numberOfResidents());
     }
+
+    @Test
+    public void getNumberOfResident() {
+        Building building = new Building(4, "Alex");
+        assertEquals(1, building.numberOfResidents());
+    }
 }

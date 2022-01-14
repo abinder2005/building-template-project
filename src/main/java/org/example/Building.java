@@ -11,12 +11,12 @@ import java.util.List;
 public class Building
 {
     private int mId;
-    private String mResident;
     private List<String> mResidents;
 
     public Building(int id, String resident) {
         mId = id;
-        mResident = resident;
+        mResidents = new ArrayList<>();
+        mResidents.add(resident);
     }
 
     public Building(int id, String[] residents) {
@@ -34,7 +34,7 @@ public class Building
     }
 
     public String getResident() {
-        return mResident;
+        return mResidents.get(0);
     }
 
     public String[] getResidents() {
